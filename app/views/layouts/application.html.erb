@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rails5 Starter with Social Login</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <%= render 'layouts/header' %>
+    <div class="container">
+      <div class="page-header" id="banner">
+        <div class="row">
+          <div class="col-lg-8 col-md-7 col-sm-6">
+            <h1>Darkly</h1>
+            <p class="lead">Flatly in night mode</p>
+          </div>
+          <div class="col-lg-4 col-md-5 col-sm-6">
+            <div class="sponsor">
+              <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=bootswatchcom" id="_carbonads_js"></script>
+            </div>
+          </div>
+        </div>
+        <% flash.each do |name, msg| %>
+        <%= content_tag(:div, msg, class: "alert alert-info") %>
+        <% end %>
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>

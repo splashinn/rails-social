@@ -1,0 +1,28 @@
+<div class="navbar navbar-toggleable-md navbar-inverse bg-primary">
+  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="container">
+    <div class="navbar-collapse collapse" id="navbarResponsive" aria-expanded="false">
+      <a href="/" class="navbar-brand">Rails 5 Starter</a>
+
+      <ul class="nav navbar-nav ml-auto">
+        <% if current_user %>
+          <li class="nav-item">
+            <div class="nav-link">
+              Signed in as <strong><%= current_user.name %></strong>!
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="<%= signout_path %>" class="nav-link">Sign out</a>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <a href="/auth/google_oauth2" class="nav-link">Sign in with Google</a>
+          </li>
+        <% end %>
+
+      </ul>
+    </div>
+  </div>
+</div>
