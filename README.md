@@ -1,4 +1,4 @@
-# Rails 5 Starter with Social Login
+# Rails 5 with Social Login
 Generate model User
 ```
 rails g model User name username email password_digest api_key is_admin:boolean role
